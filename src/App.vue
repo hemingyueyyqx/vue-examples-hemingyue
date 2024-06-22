@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import SidebarView from '@/views/SidebarView.vue'
-
 SidebarView
 </script>
 
 <template>
   <SidebarView id="sidebar" />
   <RouterView id="main" />
+  <!-- <router-view /> -->
 </template>
 <style>
+/* 全局css属性  */
 #app {
   display: flex;
 }
