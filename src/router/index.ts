@@ -1,4 +1,9 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import {
+  createRouter,
+  createWebHashHistory,
+  createWebHistory,
+  type RouteRecordRaw
+} from 'vue-router'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
@@ -6,13 +11,13 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/example01',
-    component: () => import('@/views/example01/ExampleView01.vue')
+    component: () => import('@/views/example01/ExampleView01-1.vue')
   }
 ]
 
 const router = createRouter({
   //history: createWebHistory(import.meta.env.BASE_URL),
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 
