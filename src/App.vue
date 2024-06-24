@@ -16,6 +16,7 @@ import SidebarView from '@/views/SidebarView.vue'
   display: flex;
   max-width: 1200px;
   margin: auto;
+  height: 100vw;
 }
 #sidebar {
   border: 1px solid red;
