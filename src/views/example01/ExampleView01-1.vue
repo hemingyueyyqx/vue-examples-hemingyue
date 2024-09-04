@@ -1,50 +1,3 @@
-<script setup lang="ts">
-import type { User } from '@/type/'
-import { computed, ref, watch, watchEffect } from 'vue'
-const message = 'hello'
-const userAsync: User = {
-  name: 'Lucy',
-  address: 'Beijing',
-  insertTime: '2024-06-25T22:43:25'
-}
-const user: User = {
-  name: 'Mingyue',
-  address: 'Herbin',
-  insertTime: '2024-06-23T22:45:25'
-}
-//响应数据，改变原对象的值
-const messageRef = ref('hello world')
-const userRef = ref(user)
-// console.log(messageRef)
-// console.log(userRef)
-const changeUserRef = () => {
-  setTimeout(() => {
-    userRef.value = userAsync
-  }, 1000)
-}
-//用空格代替insertTime的T
-const userComputed = computed(() => userRef.value.insertTime?.replace('T', ' '))
-
-// 可监听userRef中对象引用的改变,两个参数
-watch(userRef, () => alert(`watch被激活。用户对象改变`))
-
-const changeUserRef2 = () => {
-  setTimeout(() => {
-    userRef.value.name = 'Sam'
-  }, 1000)
-}
-// 可监听userRef中对象的改变，以及对象中属性数据的变化,三个参数，对象中可声明deep属性，可监听对象中属性的改变；immediate属性，即时监听响应式数据的改变
-watch(
-  userRef,
-  (newUser) => alert(`watch被激活。用户对象中属性数据被改变，名被改为: ${newUser.name}`),
-  { deep: true }
-)
-//首次初始化组件响应式数据时即执行回调，同时监听响应式对象属性的改变。类似整合immediate/deep的watch()
-
-watchEffect(() => {
-  console.log(`watchEffect: ${userRef.value.name}`)
-})
-</script>
 <template>
   <div>
     <!-- <div>
@@ -105,6 +58,54 @@ watchEffect(() => {
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import type { User } from '@/type/'
+import { computed, ref, watch, watchEffect } from 'vue'
+//const message = 'hello'
+const userAsync: User = {
+  name: 'Lucy',
+  address: 'Beijing',
+  insertTime: '2024-06-25T22:43:25'
+}
+const user: User = {
+  name: 'Mingyue',
+  address: 'Herbin',
+  insertTime: '2024-06-23T22:45:25'
+}
+//响应数据，改变原对象的值
+//const messageRef = ref('hello world')
+const userRef = ref(user)
+// console.log(messageRef)
+// console.log(userRef)
+const changeUserRef = () => {
+  setTimeout(() => {
+    userRef.value = userAsync
+  }, 1000)
+}
+//用空格代替insertTime的T
+const userComputed = computed(() => userRef.value.insertTime?.replace('T', ' '))
+
+// 可监听userRef中对象引用的改变,两个参数
+watch(userRef, () => alert(`watch被激活。用户对象改变`))
+
+const changeUserRef2 = () => {
+  setTimeout(() => {
+    userRef.value.name = 'Sam'
+  }, 1000)
+}
+// 可监听userRef中对象的改变，以及对象中属性数据的变化,三个参数，对象中可声明deep属性，可监听对象中属性的改变；immediate属性，即时监听响应式数据的改变
+watch(
+  userRef,
+  (newUser) => alert(`watch被激活。用户对象中属性数据被改变，名被改为: ${newUser.name}`),
+  { deep: true }
+)
+//首次初始化组件响应式数据时即执行回调，同时监听响应式对象属性的改变。类似整合immediate/deep的watch()
+
+watchEffect(() => {
+  console.log(`watchEffect: ${userRef.value.name}`)
+})
+</script>
+
 <style scoped>
 /* h1 {
   color: red;

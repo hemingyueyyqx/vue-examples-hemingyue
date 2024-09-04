@@ -11,7 +11,7 @@
         </router-link>
       </li>
       <li><router-link to="/ExampleView01-2">reactive()</router-link></li>
-      <li><router-link to="/ExampleView01-3">reactive()-02</router-link></li>
+      <li><router-link to="/ExampleView01-3">ref()-02</router-link></li>
       <li><router-link to="/ExampleView01-4">shallowRef()</router-link></li>
       <!-- <li><router-link to="/ExampleView03-1">defineProps()</router-link></li> -->
     </ul>
@@ -38,6 +38,15 @@
       </li>
       <li>
         <router-link to="ExampleView04-3">v-for</router-link>
+      </li>
+      <li>
+        <router-link to="ExampleView04-4">v-model</router-link>
+      </li>
+    </ul>
+    <h3>store</h3>
+    <ul>
+      <li>
+        <router-link to="ExampleView05-1">state</router-link>
       </li>
     </ul>
   </div>

@@ -32,7 +32,7 @@ const routes: RouteRecordRaw[] = [
   // {
   //   path: '/ExampleView03-1',
   //   component: () => import('@/views/example03/ExampleView03-1.vue')
-  // }
+  // },
   {
     path: '/ExampleView04-1',
     component: () => import('@/views/example04/ExampleView04-1.vue')
@@ -44,6 +44,14 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/ExampleView04-3',
     component: () => import('@/views/example04/ExampleView04-3.vue')
+  },
+  {
+    path: '/ExampleView04-4',
+    component: () => import('@/views/example04/ExampleView04-4.vue')
+  },
+  {
+    path: '/ExampleView05-1',
+    component: () => import('@/views/example05/ExampleView05-1.vue')
   }
 ]
 

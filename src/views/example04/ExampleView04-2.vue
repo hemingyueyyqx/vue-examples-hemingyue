@@ -1,24 +1,7 @@
-<script setup lang="ts">
-import { ref, watch } from 'vue'
-const submitButtonDisableRef = ref(true)
-const activeRef = ref(false)
-watch(submitButtonDisableRef, (newValue: boolean) => alert(`按钮被禁用 ${newValue}`))
-const setAgree = () => (submitButtonDisableRef.value = !submitButtonDisableRef.value)
-const colorP = ref('red')
-</script>
-<style scoped>
-.bg-red {
-  background-color: red;
-}
-.v-bind-color {
-  background-color: v-bind(colorP);
-}
-</style>
 <template>
   <div>
     <h1>v-bind</h1>
-    <p>v-bind, 将指定事件绑定到methods中的方法，动态绑定标签属性，至响应式数据的表达式
-    </p>
+    <p>v-bind, 将指定事件绑定到methods中的方法，动态绑定标签属性，至响应式数据的表达式</p>
     <p>
       <label for="">
         <input type="checkbox" @click="setAgree" />
@@ -43,3 +26,19 @@ const colorP = ref('red')
     </p>
   </div>
 </template>
+<script setup lang="ts">
+import { ref, watch } from 'vue'
+const submitButtonDisableRef = ref(true)
+const activeRef = ref(false)
+watch(submitButtonDisableRef, (newValue: boolean) => alert(`按钮被禁用 ${newValue}`))
+const setAgree = () => (submitButtonDisableRef.value = !submitButtonDisableRef.value)
+const colorP = ref('red')
+</script>
+<style scoped>
+.bg-red {
+  background-color: red;
+}
+.v-bind-color {
+  background-color: v-bind(colorP);
+}
+</style>

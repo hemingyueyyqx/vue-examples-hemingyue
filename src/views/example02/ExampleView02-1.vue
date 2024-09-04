@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import { watch } from 'vue'
-import { useRoute } from 'vue-router'
-const route = useRoute()
-watch(
-  route,
-  () => {
-    console.log(route.params)
-  },
-  { immediate: true }
-)
-</script>
 <template>
   <div>
     <div>
@@ -30,3 +18,15 @@ watch(
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
+const route = useRoute()
+watch(
+  route,
+  () => {
+    console.log(route.params)
+  },
+  { immediate: true }
+)
+</script>

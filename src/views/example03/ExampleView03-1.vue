@@ -1,6 +1,29 @@
+<template>
+  <div>
+    <h1>Composition-API</h1>
+    <p>
+      可直接使用：{{ userRef?.name }} / {{ userRef?.insertTime }} /
+      {{ userRef.address }}
+    </p>
+    <p>
+      {{ replaceTime(userRef.insertTime!) }}
+      <button @click="changeUser">change user address</button>
+    </p>
+    <hr />
+    <h1>defineProps()</h1>
+    <p>
+      defineProps()函数仅能在setup标签中使用，无需引入，运行时会被替换。如果显式未引入错误，配置.eslintrc.js。
+      <!-- 希望尽快出兼容性好的vite-eslint-prettier插件。 -->
+      <br />
+      通过defineProps()函数获取传入的props，如果通过地址传参，则数据必须是string类型。sid:
+      {{ props.sid }}
+    </p>
+  </div>
+</template>
+
 <script setup lang="ts">
 import type { User } from '@/type'
-import { Ref, ref, computed } from 'vue'
+import { type Ref, ref, computed } from 'vue'
 // 地址参数的属性，必须是string类型
 interface Props {
   sid: string
@@ -25,25 +48,3 @@ let userRef = ref<User>({
 
 let { changeUser, replaceTime } = useUser(userRef)
 </script>
-<template>
-  <div>
-    <h1>Composition-API</h1>
-    <p>
-      可直接使用：{{ userRef?.name }} / {{ userRef?.insertTime }} /
-      {{ userRef.address }}
-    </p>
-    <p>
-      {{ replaceTime(userRef.insertTime!) }}
-      <button @click="changeUser">change user address</button>
-    </p>
-    <hr />
-    <h1>defineProps()</h1>
-    <p>
-      defineProps()函数仅能在setup标签中使用，无需引入，运行时会被替换。如果显式未引入错误，配置.eslintrc.js。
-      <!-- 希望尽快出兼容性好的vite-eslint-prettier插件。 -->
-      <br />
-      通过defineProps()函数获取传入的props，如果通过地址传参，则数据必须是string类型。sid:
-      {{ props.sid }}
-    </p>
-  </div>
-</template>

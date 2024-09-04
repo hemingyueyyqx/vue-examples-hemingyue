@@ -1,18 +1,3 @@
-<script setup lang="ts">
-import type { Course } from '@/type'
-import { shallowRef } from 'vue'
-
-const courseR = shallowRef<Course>()
-console.log(courseR)
-
-const course: Course = { id: 10, name: 'Java' }
-const getCourseF = () => {
-  courseR.value = course
-}
-const updateCourseF = () => {
-  courseR.value && (courseR.value.name = 'web')
-}
-</script>
 <template>
   <div>
     <h1>shallowRef()</h1>
@@ -28,3 +13,18 @@ const updateCourseF = () => {
     </p>
   </div>
 </template>
+<script setup lang="ts">
+import type { Course } from '@/type'
+import { shallowRef } from 'vue'
+
+const courseR = shallowRef<Course>()
+console.log(courseR)
+
+const course: Course = { id: 10, name: 'Java' }
+const getCourseF = () => {
+  courseR.value = course
+}
+const updateCourseF = () => {
+  courseR.value && (courseR.value.name = 'web')
+}
+</script>
