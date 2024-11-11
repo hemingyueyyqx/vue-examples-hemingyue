@@ -49,5 +49,14 @@
         <router-link to="ExampleView05-1">state</router-link>
       </li>
     </ul>
+    <h3>form</h3>
+    <ul>
+      <li>
+        <router-link to="Example06-1">form1</router-link>
+      </li>
+      <li>
+        <router-link to="Example06-2">form2</router-link>
+      </li>
+    </ul>
   </div>
 </template>
