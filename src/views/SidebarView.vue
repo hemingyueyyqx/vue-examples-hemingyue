@@ -70,5 +70,14 @@
         <router-link to="Example07-3">手写Promise</router-link>
       </li>
     </ul>
+    <h3>组件通信</h3>
+    <ul>
+      <li>
+        <router-link to="Example08-1">父组件</router-link>
+      </li>
+      <li>
+        <router-link to="Example08-2">子组件</router-link>
+      </li>
+    </ul>
   </div>
 </template>
