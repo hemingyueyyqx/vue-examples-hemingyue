@@ -63,9 +63,12 @@
       <li>
         <router-link to="Example07-1">二维数组拍平</router-link>
       </li>
-      <!-- <li>
-        <router-link to="Example06-2">form2</router-link>
-      </li> -->
+      <li>
+        <router-link to="Example07-2">Promise</router-link>
+      </li>
+      <li>
+        <router-link to="Example07-3">手写Promise</router-link>
+      </li>
     </ul>
   </div>
 </template>
