@@ -79,9 +79,11 @@
         <router-link to="Example08-2">子组件</router-link>
       </li>
     </ul>
-    <h3>双向绑定实现原理</h3>
+    <h3>vue</h3>
     <ul>
       <li><router-link to="Example10-1">v-model底层原理</router-link></li>
+      <li><router-link to="Example11-1">vue虚拟DOM</router-link></li>
+      <li><router-link to="Example11-2">nextTick()</router-link></li>
     </ul>
   </div>
 </template>

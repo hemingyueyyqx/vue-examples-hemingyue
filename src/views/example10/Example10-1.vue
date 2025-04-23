@@ -15,8 +15,10 @@ let password = ref('123456')
       <!-- <input type="text" v-model="username" /> -->
       <!-- :value="username"实现数据到页面 -->
       <!-- $event事件对象，target事件本体，发生事件的元素 -->
-      <!-- <input type="text" :value="username"  -->
-      <!-- @input="username = (<HTMLInputElement>$event.target).value" /> -->
+      <!-- <input
+        type="text"
+        :value="username"
+        @input="username = (<HTMLInputElement>$event.target).value" /> -->
       <!-- v-model用在组件标签上 -->
       <!-- <MyInput v-model="username" /> -->
       <!-- update:modelValue事件名 -->
