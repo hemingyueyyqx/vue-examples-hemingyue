@@ -75,15 +75,27 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/Example08-1',
-    component: () => import('@/views/example08/Example08-1.vue')
+    component: () => import('@/views/example08/propsandemits/Example08-1.vue')
   },
   {
     path: '/Example08-2',
-    component: () => import('@/views/example08/Example08-2.vue')
+    component: () => import('@/views/example08/mitt/Example08-3.vue')
   },
   {
-    path: '/Example10-1',
-    component: () => import('@/views/example10/Example10-1.vue')
+    path: '/Example08-6',
+    component: () => import('@/views/example08/v-model/Example08-6.vue')
+  },
+  {
+    path: '/Example08-7',
+    component: () => import('@/views/example08/$attrs/Example08-7.vue')
+  },
+  {
+    path: '/Example08-8',
+    component: () => import('@/views/example08/$refs$parent/Example08-8.vue')
+  },
+  {
+    path: '/Example08-9',
+    component: () => import('@/views/example08/provideinject/Example08-9.vue')
   },
   {
     path: '/Example11-1',

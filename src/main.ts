@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+// import emitter from "./utils/emitter";
 import App from './App.vue'
 import router from './router'
 

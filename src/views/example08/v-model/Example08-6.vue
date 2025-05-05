@@ -11,6 +11,7 @@ let password = ref('123456')
       <h3>父组件</h3>
       <h3>v-model既能父传子,也能子传父</h3>
       <h4>{{ username }}</h4>
+      <h4>{{ password }}</h4>
       <!-- v-model用在html标签上 -->
       <!-- <input type="text" v-model="username" /> -->
       <!-- :value="username"实现数据到页面 -->

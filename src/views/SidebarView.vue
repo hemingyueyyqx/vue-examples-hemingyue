@@ -73,15 +73,18 @@
     <h3>组件通信</h3>
     <ul>
       <li>
-        <router-link to="Example08-1">父组件</router-link>
+        <router-link to="Example08-1">defineProps 父传子 子传父 defineEmits 子传父</router-link>
       </li>
       <li>
-        <router-link to="Example08-2">子组件</router-link>
+        <router-link to="Example08-2">mitt 任意组件间通信</router-link>
       </li>
+      <li><router-link to="Example08-6">v-model</router-link></li>
+      <li><router-link to="Example08-7">$attrs</router-link></li>
+      <li><router-link to="Example08-8">$refs$parent</router-link></li>
+      <li><router-link to="Example08-9">provide,inject</router-link></li>
     </ul>
     <h3>vue</h3>
     <ul>
-      <li><router-link to="Example10-1">v-model底层原理</router-link></li>
       <li><router-link to="Example11-1">vue虚拟DOM</router-link></li>
       <li><router-link to="Example11-2">nextTick()</router-link></li>
     </ul>
